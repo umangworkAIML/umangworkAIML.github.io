@@ -409,6 +409,29 @@ function init3DTilt() {
     });
 }
 
+// ============ GITHUB STATS HANDLING ============
+function initGithubStats() {
+    const githubImg = document.getElementById('github-stats-img');
+    const skeleton = document.getElementById('github-skeleton');
+
+    if (githubImg && skeleton) {
+        githubImg.onload = () => {
+            githubImg.classList.add('loaded');
+            skeleton.style.display = 'none';
+        };
+
+        githubImg.onerror = () => {
+            skeleton.innerHTML = `<p class="stats-fallback">📊 Check my GitHub for live stats</p>`;
+        };
+
+        // Check if image is already cached/loaded
+        if (githubImg.complete && githubImg.naturalHeight !== 0) {
+            githubImg.classList.add('loaded');
+            skeleton.style.display = 'none';
+        }
+    }
+}
+
 // ============ INITIALIZE ALL ============
 function init() {
     // Add no-scroll class initially for preloader
@@ -426,6 +449,7 @@ function init() {
     initScrollAnimations();
     initFormHandling();
     init3DTilt();
+    initGithubStats();
 
     console.log('🚀 Portfolio initialized successfully!');
 }
