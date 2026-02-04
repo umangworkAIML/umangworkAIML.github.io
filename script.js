@@ -9,11 +9,10 @@
 const CONFIG = {
     typingWords: [
         "AI/ML Developer",
-        "Algo Trader",
-        "Building Autonomous AI Agents",
-        "MQL5 Expert Advisor Developer",
-        "Python Enthusiast",
-        "Future Quantum ML Engineer"
+        "Building Automations",
+        "Algorithmic Trading",
+        "Python Developer",
+        "Exploring Quantum ML"
     ],
     typingSpeed: 100,
     deletingSpeed: 50,
@@ -55,8 +54,15 @@ function initPreloader() {
 function initCustomCursor() {
     if (!DOM.cursor || !DOM.cursorFollower) return;
 
-    // Check if device supports hover (not touch)
-    if (window.matchMedia('(hover: none)').matches) return;
+    // Performance & Accessibility: Disable on touch devices and reduced motion
+    const isTouch = window.matchMedia('(hover: none)').matches;
+    const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (isTouch || isReducedMotion) {
+        DOM.cursor.style.display = 'none';
+        DOM.cursorFollower.style.display = 'none';
+        return;
+    }
 
     let mouseX = 0, mouseY = 0;
     let cursorX = 0, cursorY = 0;
@@ -96,6 +102,34 @@ function initCustomCursor() {
         el.addEventListener('mouseleave', () => {
             DOM.cursor.classList.remove('hover');
             DOM.cursorFollower.classList.remove('hover');
+        });
+    });
+}
+
+// ============ 3D TILT EFFECT ============
+function init3DTilt() {
+    const cards = document.querySelectorAll('.skill-card, .project-card');
+
+    // Performance check: Disable on touch or reduced motion
+    if (window.matchMedia('(hover: none)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = (y - centerY) / 20;
+            const rotateY = (centerX - x) / 20;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
         });
     });
 }

@@ -1474,3 +1474,40 @@ body:hover .cursor-follower {
         grid-template-columns: 1fr;
     }
 }
+
+/* ============ ACCESSIBILITY & PERFORMANCE ============ */
+/* Focus Visibility */
+:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 4px;
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+
+    .cursor,
+    .cursor-follower,
+    .glitch::before,
+    .glitch::after,
+    .particles-js-canvas-el {
+        display: none !important;
+    }
+
+    .glitch {
+        animation: none;
+    }
+
+    /* Ensure visible state for scroll animations */
+    .animate-on-scroll {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+}
