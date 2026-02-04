@@ -11,17 +11,48 @@
 </head>
 
 <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <span class="loader-text">UMANG</span>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
 
     <header>
         <div class="logo">UMANG</div>
-        <nav>
+        <nav class="desktop-nav">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="skills.html" class="active">Skills</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
         </nav>
+        <button class="theme-toggle" id="theme-toggle" title="Toggle theme">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html" class="active">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
     <main>
         <div class="section-container">
@@ -83,6 +114,9 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

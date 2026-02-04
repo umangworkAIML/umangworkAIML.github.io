@@ -12,28 +12,77 @@
 </head>
 
 <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <span class="loader-text">UMANG</span>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
 
     <header>
         <div class="logo">UMANG</div>
-        <nav>
+        <nav class="desktop-nav">
             <a href="index.html" class="active">Home</a>
             <a href="about.html">About</a>
             <a href="skills.html">Skills</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
         </nav>
+        <button class="theme-toggle" id="theme-toggle" title="Toggle theme">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
     <main>
         <section class="hero">
-
-            <h1>Building the Future<br>with Code</h1>
-            <p>AI/ML Developer • Algo Trader • Building Autonomous Systems</p>
+            <h1 class="glitch" data-text="Umang Khavda">Umang Khavda</h1>
+            <div class="typing-container">
+                <span class="typing-text" id="typing-text"></span>
+                <span class="cursor-blink">|</span>
+            </div>
 
             <div class="btn-container">
                 <a href="projects.html" class="btn"><i class="fas fa-rocket"></i> View My Work</a>
                 <a href="https://github.com/umangworkAIML" target="_blank" class="btn btn-outline"><i
                         class="fab fa-github"></i> GitHub</a>
+            </div>
+
+            <!-- GitHub Stats -->
+            <div class="github-stats" data-aos="fade-up">
+                <a href="https://github.com/umangworkAIML" target="_blank">
+                    <img src="https://github-readme-stats.vercel.app/api?username=umangworkAIML&show_icons=true&theme=radical&hide_border=true&bg_color=0a0a0a&title_color=00e5ff&icon_color=00ff88&text_color=eaeaea"
+                        alt="GitHub Stats">
+                </a>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Scroll Down</span>
             </div>
         </section>
     </main>
@@ -49,6 +98,12 @@
         </div>
     </footer>
 
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Main Script -->
+    <script src="script.js"></script>
 </body>
 
 </html>
