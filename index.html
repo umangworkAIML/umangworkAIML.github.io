@@ -4,105 +4,488 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Umang | AI/ML Developer & Algo Trader</title>
     <meta name="description"
-        content="AIML Student building Automated Trading Systems, AI Agents, and innovative solutions. Python & AI Enthusiast.">
+        content="Umang Khavda - AI/ML Developer, Algo Trader, and Python Enthusiast. Building Autonomous AI Agents and Automated Trading Systems.">
+    <meta name="keywords" content="AI, ML, Python, Algo Trading, MQL5, LangGraph, Portfolio">
+    <meta name="author" content="Umang Khavda">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Umang Khavda | AI/ML Developer">
+    <meta property="og:description" content="Building Autonomous AI Agents and Automated Trading Systems">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://theumang.me">
+
+    <title>Umang Khavda | AI/ML Developer & Algo Trader</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Preloader -->
+    <!-- ============ PRELOADER ============ -->
     <div class="preloader" id="preloader">
-        <div class="loader">
-            <span class="loader-text">UMANG</span>
-            <div class="loader-bar"></div>
+        <div class="preloader-content">
+            <div class="preloader-logo">UMANG</div>
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
+            </div>
         </div>
     </div>
 
-    <!-- Custom Cursor -->
+    <!-- ============ CUSTOM CURSOR ============ -->
     <div class="cursor" id="cursor"></div>
     <div class="cursor-follower" id="cursor-follower"></div>
 
-    <!-- Particles Background -->
-    <div id="particles-js"></div>
+    <!-- ============ HEADER / NAVIGATION ============ -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="nav-logo">UMANG</a>
 
-    <header>
-        <div class="logo">UMANG</div>
-        <nav class="desktop-nav">
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
-            <a href="skills.html">Skills</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+
+                <button class="nav-close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+
+                <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </nav>
-        <button class="theme-toggle" id="theme-toggle" title="Toggle theme">
-            <i class="fas fa-moon"></i>
-        </button>
-        <button class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
     </header>
 
-    <!-- Mobile Menu -->
-    <nav class="mobile-nav" id="mobile-nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    <!-- ============ MAIN CONTENT ============ -->
+    <main class="main">
 
-    <main>
-        <section class="hero">
-            <h1 class="glitch" data-text="Umang Khavda">Umang Khavda</h1>
-            <div class="typing-container">
-                <span class="typing-text" id="typing-text"></span>
-                <span class="cursor-blink">|</span>
-            </div>
+        <!-- ======= HOME SECTION ======= -->
+        <section class="home section" id="home">
+            <div class="home-container container">
+                <div class="home-content">
+                    <h1 class="home-title">
+                        <span class="home-greeting">Hi, I'm</span>
+                        <span class="home-name glitch" data-text="Umang Khavda">Umang Khavda</span>
+                    </h1>
 
-            <div class="btn-container">
-                <a href="projects.html" class="btn"><i class="fas fa-rocket"></i> View My Work</a>
-                <a href="https://github.com/umangworkAIML" target="_blank" class="btn btn-outline"><i
-                        class="fab fa-github"></i> GitHub</a>
-            </div>
+                    <div class="home-subtitle">
+                        <span class="typing-text" id="typing-text"></span>
+                        <span class="typing-cursor">|</span>
+                    </div>
 
-            <!-- GitHub Stats -->
-            <div class="github-stats" data-aos="fade-up">
-                <a href="https://github.com/umangworkAIML" target="_blank">
-                    <img src="https://github-readme-stats.vercel.app/api?username=umangworkAIML&show_icons=true&theme=radical&hide_border=true&bg_color=0a0a0a&title_color=00e5ff&icon_color=00ff88&text_color=eaeaea"
-                        alt="GitHub Stats">
+                    <p class="home-description">
+                        AIML Student at Swaminarayan University • Building Automated Trading Systems & Autonomous AI
+                        Agents
+                    </p>
+
+                    <div class="home-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            <span>View My Work</span>
+                        </a>
+                        <a href="https://github.com/umangworkAIML" target="_blank" rel="noopener"
+                            class="btn btn-outline">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+
+                    <!-- GitHub Stats with Skeleton Fallback -->
+                    <div class="github-stats" id="github-stats">
+                        <div class="github-stats-skeleton" id="github-skeleton">
+                            <div class="skeleton-box"></div>
+                        </div>
+                        <img src="https://github-readme-stats.vercel.app/api?username=umangworkAIML&show_icons=true&theme=radical&hide_border=true&bg_color=0a0a0a&title_color=00e5ff&icon_color=00ff88&text_color=eaeaea"
+                            alt="GitHub Stats" class="github-stats-img" id="github-stats-img" loading="lazy"
+                            onload="this.classList.add('loaded'); document.getElementById('github-skeleton').style.display='none';"
+                            onerror="document.getElementById('github-skeleton').innerHTML='<p class=\"
+                            stats-fallback\">📊 Check my GitHub for live stats</p>';"
+                        >
+                    </div>
+                </div>
+
+                <!-- Scroll Indicator -->
+                <a href="#about" class="scroll-indicator" id="scroll-indicator">
+                    <div class="scroll-mouse">
+                        <div class="scroll-wheel"></div>
+                    </div>
+                    <span class="scroll-text">Scroll Down</span>
                 </a>
             </div>
+        </section>
 
-            <!-- Scroll Indicator -->
-            <div class="scroll-indicator">
-                <div class="mouse">
-                    <div class="wheel"></div>
+        <!-- ======= ABOUT SECTION ======= -->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">My journey in technology and innovation</p>
                 </div>
-                <span>Scroll Down</span>
+
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            I am an <strong class="highlight">AIML-focused IT student</strong> at Swaminarayan
+                            University
+                            who believes in domination through skill, consistency, and execution.
+                        </p>
+                        <p>
+                            Currently building <strong class="highlight-secondary">Automated Trading Systems</strong>
+                            with MQL5
+                            that turn logic into liquidity, and developing <strong class="highlight">Autonomous AI
+                                Agents</strong>
+                            using Python, LangGraph, and modern LLMs.
+                        </p>
+                        <p>
+                            I'm constantly researching Quantum Machine Learning to solve complex computational problems
+                            that classical computers struggle with. My goal is to leverage technology to create
+                            impactful solutions.
+                        </p>
+
+                        <div class="about-tags">
+                            <span class="tag">🤖 AI Agents</span>
+                            <span class="tag">📈 Algo Trading</span>
+                            <span class="tag">🧠 Machine Learning</span>
+                            <span class="tag">⚛️ Quantum ML</span>
+                            <span class="tag">🐍 Python</span>
+                        </div>
+                    </div>
+
+                    <div class="about-journey">
+                        <div class="journey-card">
+                            <div class="journey-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <h3>Education</h3>
+                            <p>AIML at Swaminarayan University</p>
+                        </div>
+                        <div class="journey-card">
+                            <div class="journey-icon"><i class="fas fa-rocket"></i></div>
+                            <h3>Building</h3>
+                            <p>Trading Bots & AI Agents</p>
+                        </div>
+                        <div class="journey-card">
+                            <div class="journey-icon"><i class="fas fa-atom"></i></div>
+                            <h3>Researching</h3>
+                            <p>Quantum Machine Learning</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======= SKILLS SECTION ======= -->
+        <section class="skills section" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Technical Skills</h2>
+                    <p class="section-subtitle">Technologies I use to build impactful solutions</p>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <div class="skill-icon"><i class="fab fa-python"></i></div>
+                        <h3 class="skill-title">Python</h3>
+                        <p class="skill-description">Advanced scripting, OOP, automation, and AI/ML development with
+                            Pandas, NumPy, and LangChain.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                        <h3 class="skill-title">AI & Machine Learning</h3>
+                        <p class="skill-description">LLM integration, LangGraph agents, neural networks, and autonomous
+                            AI systems.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3 class="skill-title">Algorithmic Trading</h3>
+                        <p class="skill-description">MQL5 Expert Advisors, MetaTrader 5, backtesting strategies, and
+                            automated Forex systems.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <h3 class="skill-title">Web Development</h3>
+                        <p class="skill-description">HTML5, CSS3, JavaScript, React, responsive design, and modern
+                            UI/UX.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-database"></i></div>
+                        <h3 class="skill-title">Databases</h3>
+                        <p class="skill-description">MySQL, SQLite, database design, and data persistence for AI
+                            applications.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-atom"></i></div>
+                        <h3 class="skill-title">Quantum ML</h3>
+                        <p class="skill-description">Qiskit basics, quantum algorithms, and quantum computing
+                            exploration.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======= PROJECTS SECTION ======= -->
+        <section class="projects section" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Real-world applications showcasing AI, automation, and innovation</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: Algo Trading Bot -->
+                    <article class="project-card featured">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+                            <span class="project-badge">⭐ Featured</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Algo Trend Scalper</h3>
+                            <p class="project-description">
+                                Fully automated trading robot for MetaTrader 5 using custom-optimized
+                                Moving Average Crossover strategy with strict risk management.
+                            </p>
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <span class="stat-value">$1,290+</span>
+                                    <span class="stat-label">Net Profit</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">&lt;2.5%</span>
+                                    <span class="stat-label">Drawdown</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">4.21</span>
+                                    <span class="stat-label">Sharpe Ratio</span>
+                                </div>
+                            </div>
+                            <div class="project-tech">
+                                <span>MQL5</span>
+                                <span>MetaTrader 5</span>
+                                <span>Forex</span>
+                            </div>
+                            <a href="https://github.com/umangworkAIML/Algo-Trading-Bot-MQL5" target="_blank"
+                                rel="noopener" class="btn btn-primary btn-sm">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: AI Agent -->
+                    <article class="project-card featured">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-robot"></i></div>
+                            <span class="project-badge">🤖 AI Agent</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Project Zero: Autonomous AI Agent</h3>
+                            <p class="project-description">
+                                Recursive, self-correcting AI agent capable of writing, executing, and fixing
+                                Python code autonomously with persistent memory and web research.
+                            </p>
+                            <ul class="project-features">
+                                <li><i class="fas fa-check"></i> Self-correcting code execution</li>
+                                <li><i class="fas fa-check"></i> Persistent memory with SQLite</li>
+                                <li><i class="fas fa-check"></i> Real-time web research</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>LangGraph</span>
+                                <span>SQLite</span>
+                            </div>
+                            <a href="https://github.com/umangworkAIML/project-zero-agent" target="_blank" rel="noopener"
+                                class="btn btn-primary btn-sm">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: AI Hiring System -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-users-cog"></i></div>
+                            <span class="project-badge">📊 Dashboard</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">AI-Powered Hiring System</h3>
+                            <p class="project-description">
+                                Interactive dashboard for candidate evaluation across Crisis Management,
+                                Sustainability Knowledge, and Team Motivation using AI scoring.
+                            </p>
+                            <ul class="project-features">
+                                <li><i class="fas fa-check"></i> AI-powered candidate ranking</li>
+                                <li><i class="fas fa-check"></i> Interactive skill heatmap</li>
+                                <li><i class="fas fa-check"></i> Dynamic leaderboard</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>JavaScript</span>
+                                <span>MySQL</span>
+                            </div>
+                            <a href="https://github.com/umangworkAIML/AI-Architect-Internship-Assignment-Recycling-Hiring-System"
+                                target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: Portfolio -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-globe"></i></div>
+                            <span class="project-badge">🌐 Web</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Portfolio Website</h3>
+                            <p class="project-description">
+                                Modern single-page portfolio with smooth scrolling, particles background,
+                                custom cursor, theme toggle, and responsive design.
+                            </p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="https://github.com/umangworkAIML/umangworkAIML.github.io" target="_blank"
+                                rel="noopener" class="btn btn-primary btn-sm">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- GitHub CTA -->
+                <div class="projects-cta">
+                    <h3>Want to see more?</h3>
+                    <p>Check out all my repositories and contributions on GitHub</p>
+                    <a href="https://github.com/umangworkAIML" target="_blank" rel="noopener" class="btn btn-primary">
+                        <i class="fab fa-github"></i> Visit My GitHub Profile
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======= CONTACT SECTION ======= -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Have a project or question? Let's connect!</p>
+                </div>
+
+                <div class="contact-content">
+                    <!-- Social Links -->
+                    <div class="contact-socials">
+                        <a href="https://github.com/umangworkAIML" target="_blank" rel="noopener" class="social-card">
+                            <div class="social-icon"><i class="fab fa-github"></i></div>
+                            <h3>GitHub</h3>
+                            <p>@umangworkAIML</p>
+                        </a>
+                        <a href="https://www.linkedin.com/in/umang-khavda-bbb769390/" target="_blank" rel="noopener"
+                            class="social-card">
+                            <div class="social-icon"><i class="fab fa-linkedin"></i></div>
+                            <h3>LinkedIn</h3>
+                            <p>Umang Khavda</p>
+                        </a>
+                        <a href="https://leetcode.com/u/6419/" target="_blank" rel="noopener" class="social-card">
+                            <div class="social-icon"><i class="fas fa-code"></i></div>
+                            <h3>LeetCode</h3>
+                            <p>Problem Solving</p>
+                        </a>
+                        <a href="https://www.instagram.com/_umng__" target="_blank" rel="noopener" class="social-card">
+                            <div class="social-icon"><i class="fab fa-instagram"></i></div>
+                            <h3>Instagram</h3>
+                            <p>@_umng__</p>
+                        </a>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper">
+                        <h3>Send a Message</h3>
+                        <form action="https://formspree.io/f/xzdzrbng" method="POST" class="contact-form"
+                            id="contact-form">
+                            <div class="form-group">
+                                <input type="text" name="name" id="name" class="form-input" placeholder=" " required>
+                                <label for="name" class="form-label">Your Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" id="email" class="form-input" placeholder=" " required>
+                                <label for="email" class="form-label">Your Email</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" id="message" class="form-input form-textarea" placeholder=" "
+                                    required></textarea>
+                                <label for="message" class="form-label">Your Message</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>© 2026 Umang. Built with purpose.</p>
-        <div class="social-icons">
-            <a href="https://github.com/umangworkAIML" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/umang-khavda-bbb769390/" target="_blank"><i
-                    class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/_umng__" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://leetcode.com/u/6419/" target="_blank"><i class="fas fa-code"></i></a>
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2026 Umang Khavda. Built with purpose.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/umangworkAIML" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/umang-khavda-bbb769390/" target="_blank" rel="noopener"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/_umng__" target="_blank" rel="noopener" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://leetcode.com/u/6419/" target="_blank" rel="noopener" aria-label="LeetCode">
+                    <i class="fas fa-code"></i>
+                </a>
+            </div>
         </div>
     </footer>
 
-    <!-- Particles.js -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <!-- AOS Animation Library -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Main Script -->
+    <!-- ============ SCRIPTS ============ -->
     <script src="script.js"></script>
 </body>
 
